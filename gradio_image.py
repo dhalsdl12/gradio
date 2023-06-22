@@ -3,6 +3,7 @@ import gradio as gr
 
 
 def sepia(input_img):
+    '''
     sepia_filter = np.array([
         [0.393, 0.769, 0.189],
         [0.349, 0.686, 0.168],
@@ -11,10 +12,11 @@ def sepia(input_img):
 
     sepia_img = input_img.dot(sepia_filter.T)
     sepia_img /= sepia_img.max()
+    '''
 
-    return sepia_img
+    print(input_img)
+    return input_img
 
 
-demo = gr.Interface(sepia, gr.Image(shape=(200, 200)),
-                    'image')
+demo = gr.Interface(sepia, gr.Image(shape=(200, 200)), 'image')
 demo.launch()

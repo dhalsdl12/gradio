@@ -9,7 +9,7 @@ def get_duration(filename):
 
 print(cv2.__version__)
 
-filepath = './cat.mp4'
+filepath = './14842800001.avi'
 video = cv2.VideoCapture(filepath)
 
 if not video.isOpened():
@@ -18,7 +18,7 @@ if not video.isOpened():
 
 length = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
 fps = video.get(cv2.CAP_PROP_FPS)
-frame = 25
+frame = 10
 print("length :", length)
 print("fps :", fps)
 
